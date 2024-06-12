@@ -6,5 +6,5 @@ export class GetParams {
     @IsOptional()
     @ValidateNested()
     @Type(() => PaginationDto)
-    readonly pagination?: PaginationDto;
+    readonly pagination: PaginationDto = new PaginationDto();
 }

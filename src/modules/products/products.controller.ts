@@ -17,7 +17,6 @@ export class ProductsController {
 
   @MessagePattern({cmd: '@product/find_all'})
   async findAll(@Payload() findParams: GetParams) {
-    console.log('Find params:', findParams);
     return this.productsService.findAll({page: findParams.pagination.page, limit: findParams.pagination.limit});
   }
 
